@@ -23,9 +23,14 @@
     </v-navigation-drawer>
     <v-app-bar app dark color="primary">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-toolbar-title>
+        <v-btn to="/" class="hidden-sm-and-down">
+          Home
+        </v-btn>
+      </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn text v-for="link in links" :key="link.title" :to="link.url">
+        <v-btn v-for="link in links" :key="link.title" :to="link.url">
           <v-icon start :icon="link.icon"></v-icon>
           {{ link.title }}
         </v-btn>
