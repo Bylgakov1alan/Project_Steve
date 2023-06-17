@@ -16,6 +16,7 @@ component: HomeView
 },
 {
 path:"/ad/:id",
+props: true,
 name:"ad",
 component: AdView
 },
@@ -46,11 +47,9 @@ component: OrdersView
 }
 ]
 
-
 const router = createRouter({
-history: createWebHistory(process.env.BASE_URL),
-routes
+  history: createWebHistory(process.env.BASE_URL),
+  routes
 })
-
 
 export default router

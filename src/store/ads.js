@@ -5,28 +5,28 @@ state: {
 				title:"First",
 				desc:"First Desc",
 				promo: true,
-				src: "https://w.forfun.com/fetch/ef/efec5b0d09345e0a9d981b5b60d1880c.jpeg",
+				src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
 				id:"1"
 			},
 			{
 				title:"Second",
 				desc:"Second Desc",
 				promo: true,
-				src: "https://i.ytimg.com/vi/zaCVh8Ue9rc/maxresdefault.jpg",
+				src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
 				id:"2"
 			},
 			{
 				title:"Third",
 				desc:"Thitd Desc",
 				promo: true,
-				src: "https://gamerwall.pro/uploads/posts/2021-11/1637288547_46-gamerwall-pro-p-teksturi-mobov-v-mainkrafte-oboi-na-zastav-47.png",
+				src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
 				id:"3"
 			},
 			{
 				title:"Fouth",
 				desc:"Fouth Desc",
 				promo: true,
-				src: "https://phonoteka.org/uploads/posts/2022-09/1663296783_3-phonoteka-org-p-ender-drakon-art-krasivo-3.jpg",
+				src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
 				id:"4"
 			}
 	]
@@ -44,6 +44,11 @@ getters: {
 		},
 		myAds(state) {
 			return state.ads
+	},
+    adById(state) {
+	return id => {
+	return state.ads.find(ad => ad.id == id)
 	}
+}
 }
 }
