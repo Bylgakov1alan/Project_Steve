@@ -5,7 +5,7 @@
 
     <v-card class="elevetion-12">
      <v-toolbar dark color="primary">
-      <v-toolbar-title>Login</v-toolbar-title>
+      <v-toolbar-title>Registration</v-toolbar-title>
      </v-toolbar>
      <v-card-text>
       <v-form v-model="valid" ref="form" validation>
@@ -19,7 +19,7 @@
      <v-card-actions>
       <v-spacer></v-spacer>
       <v-btn color="primary" @click="onSubmit" :disabled="!valid">
-       Login
+       Create Account
       </v-btn>
      </v-card-actions>
     </v-card>
