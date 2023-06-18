@@ -3,13 +3,17 @@
     <v-row justify="center">
       <v-col cols="12" xs="12">
         <v-carousel>
-          <v-carousel-item v-for="ad in promoAds" :key="ad.id" :src="ad.src" cover>
-            <div class="ad-link">
-              <v-btn class="error" :to="'/ad/' + ad.id">
-                {{ ad.title }}
-              </v-btn>
-            </div>
-          </v-carousel-item>
+          <v-carousel-item 
+          v-for="ad in promoAds"
+          :key="ad.id"
+          :src="ad.src" 
+          cover>
+    <div class="ad-link">
+      <v-btn class="error" :to="'/ad/' + ad.id">
+        {{ ad.title }}
+      </v-btn>
+  </div>
+  </v-carousel-item>
         </v-carousel>
       </v-col>
     </v-row>
@@ -35,29 +39,28 @@
     </v-row>
   </v-container>
 </template>
-
 <script>
-  export default {
-    computed: {
-      promoAds() {
-        return this.$store.getters.promoAds
-      },
-      ads() {
-        return this.$store.getters.ads
-      }
+export default {
+  computed: {
+    promoAds() {
+      return this.$store.getters.promoAds
+    },
+    ads() {
+      return this.$store.getters.ads
     }
   }
+}
 </script>
 
 <style scoped>
-  .ad-link {
-    position: absolute;
-    bottom: 50px;
-    left: 50%;
-    background: rgb(0, 0, 0, 0.5);
-    transform: translate(-50%, 0);
-    padding: 5px 15px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
-  }
+	.ad-link {
+		position:absolute;
+		bottom: 50px;
+		left:50%;
+		background: rgb(0,0,0,0.5);
+		transform: translate(-50%,0);
+		padding: 5px 15px;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+	}
 </style>
