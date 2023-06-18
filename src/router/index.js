@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import AuthGuard from './auth_guard'
 import HomeView from '../views/HomeView.vue'
 import AdListView from '../views/Ads/AdListView.vue'
 import AdView from '../views/Ads/AdView.vue'
@@ -23,12 +24,14 @@ component: AdView
 {
 path:"/list",
 name:"list",
-component: AdListView
+component: AdListView,
+beforeEnter: AuthGuard
 },
 {
 path:"/new",
 name:"newAd",
-component: NewAdView
+component: NewAdView,
+beforeEnter: AuthGuard
 },
 {
 path:"/login",
@@ -43,7 +46,8 @@ component: RegistrationView
 {
 path: "/orders",
 name: "orders",
-component: OrdersView
+component: OrdersView,
+beforeEnter: AuthGuard
 }
 ]
 
